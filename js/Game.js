@@ -57,7 +57,7 @@ class Game {
     Player.getPlayerInfo();
     player.getPlayerRank();
     
-    bground.addImage(bg);
+    bground.addImage(bgImage);
     bground.scale = 1.9;
     bground.velocityX = -2;
     if(bground.x <= displayWidth/2-50){
