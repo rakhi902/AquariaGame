@@ -13,10 +13,10 @@ var form, player, game;
 
 var players, player1, player2,bground;
 
-var bg, form_bg, fish1_img, fish2_img;
+var bgImage, form_bg, fish1_img, fish2_img;
 
 function preload(){
-  bg = loadImage("images/bg.jpg");
+  bgImage = loadImage("images/bg.jpg");
   form_bg = loadImage("images/game_bg.jpg");
 
   fish1_img = loadImage("images/fish1.png");
