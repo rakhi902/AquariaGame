@@ -41,7 +41,7 @@ class Form {
     this.button.position(displayWidth/2 + 20, displayHeight/2-40);
     this.reset.position(displayWidth-100,20);
     this.rules.position(50,20);
-    swal("Rules of the Game", " 1. Player needs to collect atleast 20 items of Food\n"+
+    swal("Rules of the Game", " 1. Player needs to collect atleast 10 items of Food\n"+
     "2. If player touches obstacle, the player will loose the game. \n"+
       "3. The player, who'll collect the food items first, will be the first winner. \n"
       );
@@ -60,7 +60,7 @@ class Form {
     
     });
     this.rules.mousePressed(()=>{
-      swal("Rules of the Game", " 1. Player needs to collect atleast 20 items of Food\n"+
+      swal("Rules of the Game", " 1. Player needs to collect atleast 10 items of Food\n"+
       "2. If player touches obstacle, the player will loose the game. \n"+
         "3. The player, who'll collect the food items first, will be the first winner. \n"
         );

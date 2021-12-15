@@ -100,10 +100,12 @@ class Game {
         //  players[index - 1].shapeColor = "red";
         //  camera.position.x = displayWidth/2;
         //  camera.position.y = players[index-1].y;
-        }
         if(players[index-1].isTouching(obstaclesGroup)){
-          swal("You loose the game")
-
+          swal({
+            title: `Game Over`,
+            text: "Oops you lost the Game....!!!",
+                 });
+    
           gameState = 2;
  
         }
@@ -117,6 +119,8 @@ class Game {
           }
         }
 
+        }
+        
        
         //textSize(15);
         //text(allPlayers[plr].name + ": " + allPlayers[plr].distance, 120,display_position)
@@ -137,17 +141,23 @@ class Game {
  
    }
 
-    if(player.distance > 560 || player.distance < 38){
+    if(player.distance > 525 || player.distance < 38){
       gameState = 2;
-      swal("You loose the game")
+      swal({
+        title: `Game Over`,
+        text: "Oops you lost the Game....!!!",
+             });
 
     }
     if(player.foodCount==10){
       console.log(player.rank)
       player.rank+=1;
       player.updatePlayerRank(player.rank);
-      swal("Congratulations you have won the Game. Your rank is "+player.rank)
-
+    swal({
+      title: `Awesome!${"\n"}Rank${"\n"}${player.rank}`,
+      text: "You have achieved the target",
+     
+    });
       gameState = 2;
 
     }
@@ -190,11 +200,9 @@ class Game {
   spawnFood(){
     if(frameCount%60===0){
     food = createSprite(displayWidth+10,Math.round(random(30,displayHeight-50)));
-    food.shapeColor = "red"
     food.addImage(foodImage);
-
     food.velocityX = -6;
-   // food.scale = 0.3;
+    food.scale = 0.5;
     foodsGroup.add(food)
     }
   }

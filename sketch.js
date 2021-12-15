@@ -22,7 +22,7 @@ function preload(){
   fish1_img = loadImage("../images/fish1.png");
   fish2_img = loadImage("../images/fish2.png");
 
-  foodImage = loadImage("../images/food.PNG");
+  foodImage = loadImage("../images/food1.png");
 
   obstacle1 = loadImage("../images/stone1.png");
   obstacle2 = loadImage("../images/stone2.png");
@@ -35,7 +35,7 @@ function preload(){
 }
 
 function setup(){
-  canvas = createCanvas(displayWidth - 20, displayHeight-200);
+  canvas = createCanvas(displayWidth - 20, displayHeight-150);
   database = firebase.database();
   game = new Game();
   game.getState();
@@ -43,6 +43,7 @@ function setup(){
 
   obstaclesGroup = new Group();
   foodsGroup = new Group();
+  
 
 }
 
@@ -63,4 +64,9 @@ function draw(){
 
     game.end();
   }
+  if(gameState === 3){
+
+    form.display();
+  }
+
 }
